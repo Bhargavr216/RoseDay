@@ -40,18 +40,21 @@ function goNextPage() {
                 openBook();
                 paper1.classList.add("flipped");
                 paper1.style.zIndex = 1;
+                paper1.style.transform = "rotateY(-180deg)"; // Flip effect for the page
                 break;
             case 2:
                 paper2.classList.add("flipped");
                 paper2.style.zIndex = 2;
+                paper2.style.transform = "rotateY(-180deg)"; // Flip effect for the page
                 break;
             case 3:
                 paper3.classList.add("flipped");
                 paper3.style.zIndex = 3;
+                paper3.style.transform = "rotateY(-180deg)"; // Flip effect for the page
                 closeBook(false);
                 break;
             default:
-                throw new Error("unkown state");
+                throw new Error("Unknown state");
         }
         currentLocation++;
     }
@@ -64,20 +67,22 @@ function goPrevPage() {
                 closeBook(true);
                 paper1.classList.remove("flipped");
                 paper1.style.zIndex = 3;
+                paper1.style.transform = "rotateY(0deg)"; // Reset flip effect
                 break;
             case 3:
                 paper2.classList.remove("flipped");
                 paper2.style.zIndex = 2;
+                paper2.style.transform = "rotateY(0deg)"; // Reset flip effect
                 break;
             case 4:
                 openBook();
                 paper3.classList.remove("flipped");
                 paper3.style.zIndex = 1;
+                paper3.style.transform = "rotateY(0deg)"; // Reset flip effect
                 break;
             default:
-                throw new Error("unkown state");
+                throw new Error("Unknown state");
         }
-
         currentLocation--;
     }
 }
