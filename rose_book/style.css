@@ -19,10 +19,11 @@ body {
 .flipbook {
     width: 1000px;
     height: 600px;
+    background-image: url('you.jpg');
 }
 
 .flipbook .hard {
-    background-image: url('you.jpg');
+    background: #c0392b !important;
     color: #fff;
     font-weight: bold;
     border: none;
