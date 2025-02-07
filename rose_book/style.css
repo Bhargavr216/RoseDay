@@ -17,8 +17,10 @@ body {
 }
 
 .flipbook {
-    width: 1000px;
-    height: 600px;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    max-height: 600px;
     background-image: url('you.jpg');
 }
 
@@ -68,7 +70,7 @@ body {
     position: relative;
     display: inline-block;
     width: 100%;
-    max-width: 350px; /* Set max-width to ensure it fits properly within the page */
+    max-width: 350px;
     margin: 0 auto;
 }
 
@@ -110,4 +112,50 @@ h3 {
 small {
     font-size: 14px;
     line-height: 1.5;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .flipbook {
+        width: 100%;
+        height: auto;
+        background-image: url('you.jpg');
+    }
+
+    .flipbook .page img {
+        width: 90%;
+    }
+
+    .flower-container {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .flower-image {
+        max-width: 280px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    small {
+        font-size: 12px;
+    }
+}
+
+/* Responsive Design for Larger Screens (Laptop or larger) */
+@media (min-width: 1024px) {
+    .flipbook {
+        width: 1000px;
+        height: 600px;
+    }
+
+    .flower-image {
+        max-width: 350px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
 }
