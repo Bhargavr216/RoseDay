@@ -2,6 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dustbin Icon</title>
+    <style>
+        .dustbin-container {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .dustbin-icon {
+            position: relative;
+            top: 12em;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 12em;
+            height: 14em;
+            background: linear-gradient(90deg, #333 40%, transparent 40%);
+            background-size: 2.8em;
+            border-bottom: 1.6em solid #333;
+            border-radius: 0 0 1em 1em;
+        }
+
+        .dustbin-icon:before {
+            content: '';
+            position: absolute;
+            top: -3em;
+            left: -1.5em;
+            width: 14em;
+            height: 2.2em;
+            border: 0.6em solid #333;
+            transform: rotate(0deg);
+            border-radius: 1em 1em 0 0;
+        }
+
+        .dustbin-icon:after {
+            content: '';
+            position: absolute;
+            top: -5.1em;
+            left: 3em;
+            width: 5em;
+            height: 1.5em;
+            border-radius: 1em 1em 0 0;
+            border-width: 0.6em;
+            border-color: #333;
+            border-style: solid;
+        }
+
+        .dustbin-text {
+            font-size: 1.5em;
+            color: red;
+            margin-top: 8.4em;
+        }
+    </style>
+</head>
+<body>
+    <div class="dustbin-container">
+        <div class="dustbin-icon"></div>
+        <div class="dustbin-text">This is me</div>
+    </div>
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book</title>
@@ -10,15 +77,14 @@
     <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Previous Button -->
+    
     <button id="prev-btn">
         <i class="fas fa-arrow-circle-left"></i>
     </button>
 
 
-    <!-- Book -->
+    
     <div id="book" class="book">
-        <!-- Paper 1 -->
         <div id="p1" class="paper">
             <div class="front">
                 <div id="f1" class="front-content">
@@ -31,8 +97,6 @@
                 </div>
             </div>
         </div>
-        <!-- Paper 2 -->
-        <div id="p2" class="paper">
             <div class="front">
                 <div id="f2" class="front-content">
                     <h1>Front 2</h1>
@@ -44,7 +108,6 @@
                 </div>
             </div>
         </div>
-        <!-- Paper 3 -->
         <div id="p3" class="paper">
             <div class="front">
                 <div id="f3" class="front-content">
@@ -59,9 +122,8 @@
         </div>
     </div>
 
-    <!-- Next Button -->
     <button id="next-btn">
         <i class="fas fa-arrow-circle-right"></i>
     </button>
 </body>
-</html>
+</html>  -->
